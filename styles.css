@@ -1,1 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(154, 233, 243);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.bdy{
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+  opacity: 0;
+  /* backdrop-filter: blur(10px); */
+  position: absolute;
+}
+
+.bdy.shw{
+  opacity: 1;
+}
+
+.phone {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgb(43, 40, 42);
+  border-radius: 15px;
+  height: 95%;
+  /* height: 600px; */
+  /* width: 340px; */
+  width: 300px;
+  box-shadow: 0 0 45px black;
+}
+
+.phone .content img{
+  opacity: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 60px);
+  width: 100%;
+  /* transition: opacity 0.1s ease; */
+  filter: brightness(65%);
+}
+
+.phone .content.show img{
+  opacity: 1;
+}
+
+.search.show2{
+  opacity: 0.7;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: -5px;
+  width: 100%;
+}
+
+nav ul {
+  background-color: #616166;
+  border-top: 1px solid rgb(0, 0, 0);
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+}
+
+nav li {
+  color: rgb(8, 20, 59);
+  cursor: pointer;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul li p {
+  font-size: 12px;
+  margin: 2px 0;
+}
+
+nav ul li:hover{
+  color: #bbce11;
+}
+nav ul li.active {
+  color: rgb(181, 223, 226);
+}
+
+.nav2 ul{
+  margin: 0;
+  width: 100%;
+  color: white;
+  position: absolute;
+  background-color: #535258;
+  opacity: 1;
+  height: 5%;
+  text-align: right;
+  padding-right: 10%;
+  border-bottom: solid 1px black;
+  /* padding-top: 0.1px; */
+}
+
+.nav2 ul li{
+  list-style: none;
+  display: inline;
+}
+
+.nav2 ul li i{
+  color: rgb(8, 20, 59);
+  padding: 0% 2%;
+}
+
+.nav2 ul li:nth-child(2){
+  margin-right: -4%;
+}
+
+.nav2 ul li:nth-child(3){
+  position: absolute;
+  right: 84%;
+  /* margin-right: -4%; */
+}
+
+.phone .content .search{
+  position: absolute;
+  margin-top: 10%;
+}
+
+.phone .content .search img{
+  margin-top: 30px;
+  margin-left: 82px;
+  width: 130px;
+  height: 130px;
+  /* text-align: center; */
+  opacity: 0;
+}
+
+@media screen and (max-width: 360px) {
+  .nav2 ul{
+    padding-top: 1%;
+  }
+
+}
